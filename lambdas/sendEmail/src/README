@@ -1,0 +1,5 @@
+Use https://app.bootstrapemail.com/editor/documents to generate emails from the templates in here.
+
+After you generate the email:
+1. Replace the single curlies in the line after <style type="text/css"> with double curlies
+2. Replace escaped curlies ("%7B" and "%7D") with real ones ("{" and "}")

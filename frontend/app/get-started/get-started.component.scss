@@ -1,0 +1,42 @@
+@use "sass:map";
+@use "sass:color";
+
+@import "../../theme.scss";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+
+.panel {
+	border-radius: 1em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+.buy-now {
+	background-color: #eee;
+}
+
+.features {
+	background-color: color.scale(map.get($theme, "secondary"), $lightness: 50%);
+}
+
+.price-circle {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+li {
+	padding: 0.5rem 0rem 0.5rem;
+	text-align: left;
+}
+
+.panel-button {
+	width: 100%;
+}

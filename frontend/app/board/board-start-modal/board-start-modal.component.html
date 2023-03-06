@@ -1,0 +1,32 @@
+<ng-template #modal let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title">Start Board?</h4>
+		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<div class="container no-padding">
+			<div class="row">
+				<div class="col-12">
+					<p *ngIf="!isFreeTrial()">
+						Once you start your board, it will be available for 48 hours. You and your friends will be able to add photos, and those photos will show up instantly on your board. After that, we'll send you all those pics.
+					</p>
+					<p *ngIf="isFreeTrial()">
+						Once you start your board, it will be available for 2 hours. You'll be able to upload photos, and those photos will show up instantly on your board. <b>Note</b>: if you want to receieve digital copies of those photos after your event, you should check out our <a href="/get-started">full version</a> instead!
+					</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row align-items-center justify-content-center">
+					<button class="btn btn-primary mx-2" (click)="modal.close('')">
+						Yes, start my board!
+					</button>
+					<button class="btn btn-outline-secondary mx-2" (click)="modal.dismiss('')">
+						Cancel
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</ng-template>

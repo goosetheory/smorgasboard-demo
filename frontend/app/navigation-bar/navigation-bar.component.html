@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-md navigation-bar">
+	<a class="navbar-brand" href="/">
+		<span class="logo"></span>
+	</a>
+	<div>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+			<fa-icon class="toggler-icon" [icon]="['fas', 'bars']"></fa-icon>
+		</button>
+	</div>
+
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav mr-auto">
+			<li *ngIf="userIsLoggedIn" class="nav-item">
+				<a class="nav-link navigation-bar-item" href="/boards">
+					My Boards
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link navigation-bar-item" href="/faq">
+					FAQs
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link navigation-bar-item" href="/get-started">
+					Get Started
+				</a>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li class="nav-item">
+				<a class="nav-link navigation-bar-item" href="/login">
+					{{ userIsLoggedIn ? 'Log Out' : 'Sign Up / Log In' }}
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>

@@ -1,0 +1,45 @@
+<app-page-banner [photoSrc]="'beach-banner.png'" [bannerText]="'Checkout'"></app-page-banner>
+<div *ngIf="!finishedLoading" class="container-md text-center py-5">
+	<span class="spinner-border" style="width: 4rem; height: 4rem;" role="status"></span>
+</div>
+
+<div *ngIf="finishedLoading && paymentIntent">
+	<div class="container pt-2 text-center">
+		<p class="row justify-content-center" class="lead">Use SmorgasBoard at your next event for a fraction of the price of a traditional photo booth.</p>
+		<h3 *ngIf="!loadingNewPrice" class="row justify-content-center">${{ paymentIntent.amount / 100 }}</h3>
+		<span *ngIf="loadingNewPrice" class="row justify-content-center spinner-border"></span>
+
+		<p class="row justify-content-center small">Runs for 48 hours. Pay now, start any time.</p>
+	</div>
+	<div class="container form-container promo-form">
+		<div class="input-group">
+			<input [(ngModel)]="promoCode" type="text" class="form-control" placeholder="Promo Code">
+			<div class="input-group-append">
+				<button (click)="submitCouponCode()" [disabled]="!promoCode" class="btn btn-outline-secondary" type="button">Apply</button>
+			</div>
+		</div>
+	</div>
+	<div class="container form-container">
+		<div class="card-info">
+			<ngx-stripe-card [options]="cardOptions"></ngx-stripe-card>
+		</div>
+		<button class="pay-button" type="submit" (click)="pay()" [disabled]="paymentProcessing">
+			<span *ngIf="!paymentProcessing">Submit</span>
+			<span *ngIf="paymentProcessing" class="spinner-border spinner-border-sm" role="status"></span>
+		</button>
+		<p class="small text-center">
+			Your information is secure and confidential.
+		</p>
+	</div>
+
+	<div class="container text-center pt-2">
+		<p class="lead">Questions? <a href="/contact-us">Contact us</a>.
+		</p>
+	</div>
+</div>
+
+<div *ngIf="finishedLoading && !paymentIntent">
+	<div class="container pt-2 text-center">
+		<p class="lead">Could not load pricing information. Please <a href="/contact-us">get in touch</a>.</p>
+	</div>
+</div>

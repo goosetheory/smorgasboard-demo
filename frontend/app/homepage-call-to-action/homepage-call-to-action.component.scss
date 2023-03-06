@@ -1,0 +1,33 @@
+.image {
+	/* Use "linear-gradient" to add a lighten background effect to the image. This will make the text easier to read */
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+	                                  rgba(0, 0, 0, 0.7)),
+	url("../../assets/fireworks.jpg");
+
+	/* Set a specific height */
+	min-height: 400px;
+	width: 100%;
+
+	/* Position and center the image to scale nicely on all screens */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+
+	color: #E1E1E1;
+}
+
+.text {
+	max-width: 800px;
+	color: #E1E1E1;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.action-button {
+	min-width: 180px;
+}
+
+.button-row {
+	width: 100%;
+}

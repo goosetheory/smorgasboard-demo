@@ -1,0 +1,15 @@
+<app-page-banner [photoSrc]="'bar-banner.png'" [bannerText]="'Contact Us'"></app-page-banner>
+<div class="container-md text-center pt-2">
+	<p>Questions? Comments? Please don't hesitate to reach out. We'll get back to you soon.</p>
+	<div>
+		<a class="btn btn-primary"
+		gaEvent="click_welcome_contact_us"
+		[href]="mailtoLink"
+		(click)="onClick()">
+		Send an Email
+		</a>
+	</div>
+
+	<p class="row pt-4 pb-1 justify-content-center" [@showEmail]="showEmail ? 'show' : 'hide'">Link not working? You can reach us here: {{ emailAddress }}
+	</p>
+</div>

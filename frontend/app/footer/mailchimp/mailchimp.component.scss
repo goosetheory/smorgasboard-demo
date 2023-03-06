@@ -1,0 +1,9 @@
+@use "sass:map";
+
+@import "../../../theme.scss";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+.light-link {
+	color: map.get($theme, "secondary");
+}

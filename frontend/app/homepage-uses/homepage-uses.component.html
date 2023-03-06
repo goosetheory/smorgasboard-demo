@@ -1,0 +1,13 @@
+<div class="container-fluid uses-container text-center align-items-center justify-content-center">
+	<div class="d-flex flex-container flex-column justify-content-center align-items-center">
+		<div class="">
+			<p class="copy">The easy way to get all the photos at</p>
+		</div>
+		<div class="">
+			<ngb-carousel class="carousel" [showNavigationArrows]="false" [showNavigationIndicators]="false" [interval]="3000">
+				<ng-template ngbSlide *ngFor="let use of uses">
+					<p class="use">{{use}}</p>
+				</ng-template>
+			</ngb-carousel>
+		</div>
+</div>

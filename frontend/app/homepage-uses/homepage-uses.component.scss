@@ -1,0 +1,52 @@
+@use "sass:map";
+
+@import "../../theme.scss";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+
+.uses-container {/* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
+	background-image: linear-gradient(rgba(255, 255, 255, 0.9),
+	                                  rgba(255, 255, 255, 0.9)),
+	url("../../assets/confetti.jpg");
+
+	/* Set a specific height */
+	min-height: 200px;
+	overflow: hidden;
+	width: 100%;
+
+	/* Position and center the image to scale nicely on all screens */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.flex-container {
+	min-height: 200px;
+	height: 100%;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.carousel {
+	max-width: 400px;
+}
+
+.copy {
+	font-size: 32px;
+	font-weight: 100;
+	margin: 0px;
+	color: #555;
+}
+
+.use {
+	font-size: 36px;
+	font-family: cursive;
+	font-weight: 900;
+	margin-bottom: 0rem;
+	color: map.get($theme, "tertiary");
+}

@@ -1,0 +1,20 @@
+<div>
+	<div class="abs-top-container">
+		<div [@showHide]="disconnectAlertActive ? 'show' : 'hide'">
+			<div *ngIf="disconnectAlertActive" class="alert alert-danger abs-top-content lead"  role="alert">
+				<span class="spinner-border spinner-border-sm small-spinner" role="status"></span>
+				Could not connect to SmorgasBoard servers. Are you connected to the internet?
+			</div>
+			<div *ngIf="reconnectAlertActive" class="alert alert-success abs-top-content lead" role="alert">
+				<fa-icon icon="check"></fa-icon>
+				Reconnected.
+			</div>
+		</div>
+		<div [@showHide]="infoAlertActive ? 'show' : 'hide'">
+			<div class="alert alert-info abs-top-content lead" role="alert">
+				<fa-icon icon="info-circle"></fa-icon>
+				{{ infoMessage }}
+			</div>
+		</div>
+	</div>
+</div>

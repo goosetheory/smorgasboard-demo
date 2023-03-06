@@ -1,0 +1,31 @@
+<div *ngIf="!board" class="container-md text-center py-5">
+	<span class="spinner-border" style="width: 4rem; height: 4rem;" role="status"></span>
+</div>
+
+<div *ngIf="board" class="container py-5">
+	<h1 class="row display-4 justify-content-center text-center">Manage Photos</h1>
+	<p class="row text-center justify-content-center">Back to&nbsp;<a [href]="linkToBoard"> {{ board.boardName }}</a></p>
+	<div *ngIf="!boardCompleted">
+		<div *ngFor="let photo of photos; let i = index">
+			<div *ngIf="i % numColumns == 0" class="d-flex flex-column flex-sm-row justify-content-between align-items-center photo-row">
+				<app-photo-thumbnail [photo]="photo" (onClick)="onPhotoClick($event)"></app-photo-thumbnail>
+				<app-photo-thumbnail [photo]="photos[i + 1]" *ngIf="i + 1 < photos.length" (onClick)="onPhotoClick($event)"></app-photo-thumbnail>
+				<app-photo-thumbnail [photo]="photos[i + 2]" *ngIf="i + 2 < photos.length" (onClick)="onPhotoClick($event)"></app-photo-thumbnail>
+			</div>
+		</div>
+		<div *ngIf="noMorePhotos" class="row justify-content-center">
+			<p>No more photos available.</p>
+		</div>
+		<div class="row justify-content-center">
+			<button (click)="getNextPage()" [disabled]="noMorePhotos" disabled="noMorePhotos" class="btn btn-outline-primary">
+				Load More
+			</button>
+		</div>
+	</div>
+
+	<div *ngIf="boardCompleted">
+		<p class="text-center">This board has completed, so it is no longer possible to manage its photos.</p>
+	</div>
+</div>
+
+<app-photo-modal></app-photo-modal>

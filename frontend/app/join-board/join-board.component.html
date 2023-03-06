@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div *ngIf="canJoinBoard" class="container-md text-center py-5">
+	<p class="lead">Would you like to join {{ board.boardName }}?</p>
+	<p>You'll be able to upload photos to this board. If you are already a member of another board, you'll need to scan that board's code again to re-join.</p>
+	<button type="button" class="btn btn-primary"
+		(click)="joinBoard()" [disabled]="!joinButtonEnabled">
+		<span *ngIf="!joinButtonEnabled" class="spinner-border spinner-border-sm" role="status"></span>
+	{{ joinButtonText }}
+	</button>
+</div>
+<div *ngIf="boardDoesNotExist"
+	class="container-md text-center py-5">
+	<p class="lead">That board could not be found. Please try again.</p>
+</div>
+<div *ngIf="alreadyMember"
+	class="container-md text-center py-5">
+	<p class="lead">You are already a member of {{ board.boardName }}!</p>
+	<button class="btn btn-primary" [routerLink]="''">Upload a Photo</button>
+</div>
+<div *ngIf="!alreadyMember && !boardDoesNotExist && !canJoinBoard"
+	class="container-md text-center py-5">
+	<span class="spinner-border" style="width: 4rem; height: 4rem;" role="status"></span>
+</div>

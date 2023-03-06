@@ -1,0 +1,30 @@
+<div *ngIf="!finishedLoading" class="container-md text-center py-5">
+	<span class="spinner-border" style="width: 4rem; height: 4rem;" role="status"></span>
+</div>
+<div *ngIf="finishedLoading">
+	<div *ngIf="board" class="container-md text-center pt-5">
+		<div *ngIf="canUpload()">
+			<input type="file" class="form-control" accept="image/*" style="display:none"
+			(change)="onPhotoChange($event)" capture #upload>
+			<button type="button" class="btn btn-primary pulse" (click)="upload.click()" [disabled]="!uploadEnabled">
+				<fa-icon *ngIf="uploadEnabled" icon="camera"></fa-icon>
+				<span *ngIf="uploading" class="spinner-border spinner-border-sm" role="status"></span>
+				{{ uploadButtonText }}
+			</button>
+			<p class="pt-2">Your photo will immediately appear on {{board.boardName}}.</p>
+		</div>
+		<div *ngIf="!canUpload()">
+			<p class="lead">Sorry, that board is inactive.</p>
+		</div>
+	</div>
+	<app-add-photo-retry *ngIf="failedFile" [board]="board" [file]="failedFile"
+	(retrySuccessful)="onRetrySuccessful($event)"></app-add-photo-retry>
+	<div *ngIf="!board" class="container-md text-center pt-5">
+		<p class="lead">Sorry, that board could not be found.</p>
+	</div>
+</div>
+<div class="container">
+	<div class="row justify-content-center align-items-center">
+		<small class="px-2 text-muted text-center justify-content-center align-items-center">By using the site, you agree to our <a href="terms-of-service">terms of service</a> and <a href="cookies-policy">cookies policy</a>.</small>
+	</div>
+</div>

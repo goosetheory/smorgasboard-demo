@@ -1,0 +1,12 @@
+<div class="container-md text-center py-5">
+	<div *ngIf="board">
+		<app-board-canvas *ngIf="board" [board]="board" (startBoardCall)="startBoard($event)"></app-board-canvas>
+		<br/>
+		<app-board-trial-info [board]="board"></app-board-trial-info>
+		<app-board-instructions [board]="board"></app-board-instructions>
+		<div class="py-2">
+			<a  [href]="allPhotosLink">Manage your photos</a>
+		</div>
+	</div>
+	<app-board-start-modal [board]="board"></app-board-start-modal>
+</div>

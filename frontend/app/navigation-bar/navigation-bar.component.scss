@@ -1,0 +1,48 @@
+@use "sass:map";
+
+@import "../../theme.scss";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+embed {
+	pointer-events: none;
+}
+
+.navbar-toggler {
+	border: solid;
+	border-color: map.get($theme, "body-bg");
+	border-radius: 2px;
+	border-width: thin;
+	color: map.get($theme, "body-bg");
+	padding: 3px 8px 3px;
+    margin: -5px 0px 0px;
+}
+
+.navigation-bar {
+	background-color: gray("800");
+}
+
+.navigation-bar-item {
+	padding-top: 10px;
+	margin-left: 1.5rem;
+	color: map.get($theme, "body-bg");
+}
+
+.navigation-bar-item:hover {
+	color: map.get($theme, "tertiary");
+}
+
+.logo {
+	display: inline-block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 48px;
+	width: 154px;
+	padding: 4px 4px 0px;
+	margin: -3px 4px -22px;
+	background-image: url("../../assets/logo.svg");
+}
+
+.logo:hover {
+	background-image: url("../../assets/logo-color.svg");
+}

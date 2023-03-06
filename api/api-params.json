@@ -1,0 +1,193 @@
+{
+    "paths": [
+        {
+            "name": "/persons",
+            "lambdaFunction": "persons",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/persons"
+        },
+        {
+            "name": "/boards",
+            "lambdaFunction": "boards",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/boards"
+        },
+        {
+            "name": "/board-memberships",
+            "lambdaFunction": "boardMembership",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/board-memberships"
+        },
+        {
+            "name": "/presigned-urls",
+            "lambdaFunction": "presignedUrl",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/presigned-urls"
+        },
+        {
+            "name": "/public/presigned-urls",
+            "lambdaFunction": "presignedUrl",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/public/presigned-urls"
+        },
+        {
+            "name": "/public/boards",
+            "lambdaFunction": "boards",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/public/boards"
+        },
+        {
+            "name": "/archives",
+            "lambdaFunction": "archive",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/archives"
+        },
+        {
+            "name": "/payments/intents",
+            "lambdaFunction": "payments",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/payments/intents"
+        },
+        {
+            "name": "/public/stripe-webhook",
+            "lambdaFunction": "stripeWebhook",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/public/stripe-webhook"
+        },
+        {
+            "name": "/payments",
+            "lambdaFunction": "payments",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/payments"
+        },
+        {
+            "name": "/public/blog-posts",
+            "lambdaFunction": "blogPosts",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/public/blog-posts"
+        }
+    ],
+    "resourceName": "BoardAPI",
+    "apiName": "BoardAPI",
+    "functionArns": [
+        {
+            "lambdaFunction": "persons"
+        },
+        {
+            "lambdaFunction": "boards"
+        },
+        {
+            "lambdaFunction": "boardMembership"
+        },
+        {
+            "lambdaFunction": "presignedUrl"
+        },
+        {
+            "lambdaFunction": "archive"
+        },
+        {
+            "lambdaFunction": "payments"
+        },
+        {
+            "lambdaFunction": "stripeWebhook"
+        },
+        {
+            "lambdaFunction": "blogPosts"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-amplifyapp-dev-145507-authRole",
+        "unAuthRoleName": "amplify-amplifyapp-dev-145507-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "persons",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "boards",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "boardMembership",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "presignedUrl",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "archive",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "payments",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "stripeWebhook",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "blogPosts",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "2510a758"
+}

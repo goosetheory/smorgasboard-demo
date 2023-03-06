@@ -1,0 +1,25 @@
+@use "sass:map";
+
+@import "../../../theme.scss";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+p {
+	margin-bottom: 0px;
+}
+
+.card-title {
+	margin-bottom: 0px;
+}
+
+.card-body {
+	padding: 10px 0px;
+}
+
+.light-link {
+	color: map.get($theme, "secondary");
+}
+
+.clickable {
+	cursor: pointer;
+}

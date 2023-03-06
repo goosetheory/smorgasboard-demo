@@ -1,0 +1,21 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+.footer {
+	background-color: gray("800");
+	color: #e1e1e1;
+    min-height: 60px;
+}
+
+a {
+	color: #e1e1e1;
+}
+
+.links > * {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+.social {
+	padding: 0px 1rem 0px;
+}

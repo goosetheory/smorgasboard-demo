@@ -1,0 +1,14 @@
+<app-page-banner [photoSrc]="'beach-banner.png'" [bannerText]="'Blog'"></app-page-banner>
+<div class="container py-4">
+	<div>
+		<div *ngFor="let post of posts">
+			<div class="d-flex flex-column flex-md-row py-2">
+				<img class="col-12 col-md-4 featured-image" [src]="post.featured_image">
+				<div class="col-12 col-md-8 d-flex flex-column">
+					<a class="h3" routerLink="{{post.slug}}">{{post.title}}</a>
+					<div [innerHtml]="post.excerpt"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

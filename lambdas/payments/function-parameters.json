@@ -1,0 +1,14 @@
+{
+  "lambdaLayers": [
+    {
+      "type": "ProjectLayer",
+      "resourceName": "common2",
+      "version": 8
+    },
+    {
+      "type": "ProjectLayer",
+      "resourceName": "stripelayer",
+      "version": 1
+    }
+  ]
+}

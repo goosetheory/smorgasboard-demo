@@ -1,0 +1,7 @@
+<div class="thumbnail" (click)="photoClicked()">
+	<img *ngIf="photoEnabled()" src="{{photo.url}}">
+	<div *ngIf="!photoEnabled()" class="d-flex flex-column justify-content-center align-items-center removed-message">
+		<fa-icon class="fa-4x" icon="trash"></fa-icon>
+		<p>This photo has been removed.</p>
+	</div>
+</div>

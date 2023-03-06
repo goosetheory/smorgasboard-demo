@@ -1,0 +1,29 @@
+<div *ngIf="!isSignedIn()" class="container py-4">
+	<p class="text-center">Log in or sign up to start a free trial, schedule us for your event, and more.</p>
+</div>
+
+<amplify-authenticator usernameAlias="email" [formFields]="formFields" *ngIf="authState !== 'signedin'" initialAuthState="signup">
+	<amplify-sign-up
+	slot="sign-up"
+	usernameAlias="email"
+	[formFields]="signupFormFields"
+	></amplify-sign-up>
+	<amplify-sign-in slot="sign-in" usernameAlias="email">
+		<!-- This is here to remove federated buttons -->
+		<div slot="federated-buttons"></div>
+	</amplify-sign-in>
+</amplify-authenticator>
+<div *ngIf="authState === 'signedin' && user" class="App">
+	<div class="container py-4">
+		<div class="row align-items-center">
+			<div class="col-6">Hello, {{user.attributes.given_name}}</div>
+			<amplify-sign-out class="col-6"></amplify-sign-out>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row justify-content-center align-items-center">
+		<small class="px-2 text-muted text-center justify-content-center align-items-center">By using the site, you agree to our <a href="terms-of-service">terms of service</a> and <a href="cookies-policy">cookies policy</a>.</small>
+	</div>
+</div>

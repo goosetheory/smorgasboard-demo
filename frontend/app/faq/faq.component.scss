@@ -1,0 +1,25 @@
+@use "sass:map";
+
+@import "../../theme.scss";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+ngb-accordion {
+	width: 100%;
+	margin-top: 2rem;
+	margin-bottom: 4rem;
+}
+
+::ng-deep ngb-accordion > .card {
+	background-color: map.get($theme, "body-bg");
+}
+
+::ng-deep ngb-accordion > .card .card-header > .btn {
+	color: map.get($theme, "primary");
+	text-align: left;
+}
+
+::ng-deep a {
+	color: map.get($theme, "secondary");
+}
+

@@ -1,0 +1,16 @@
+{
+  "lambdaLayers": [
+    {
+      "type": "ProjectLayer",
+      "resourceName": "common2",
+      "version": 6
+    }
+  ],
+  "permissions": {
+    "auth": {
+      "amplifycognito": [
+        "read"
+      ]
+    }
+  }
+}

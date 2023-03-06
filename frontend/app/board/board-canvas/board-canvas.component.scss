@@ -1,0 +1,60 @@
+.photo-canvas {
+	overflow: hidden;
+	min-height: 400px;
+	min-width: 200px;
+	position: relative;
+	background-image: linear-gradient(to bottom right, #252525, #050505);
+}
+
+.canvas-controls {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	z-index: 1;
+}
+
+.board-name-container {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	background-color: #111;
+	opacity: 0.8;
+	border-bottom-right-radius: 8px;
+}
+
+.bottom-left {
+	position: absolute;
+	bottom: 8px;
+	left: 8px;
+}
+
+.large-spinner {
+	width: 5rem;
+	height: 5rem;
+}
+
+.small-spinner {
+	width: 1rem;
+	height: 1rem;
+}
+
+.abs-center {
+	bottom: 0;
+	height: 100px;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: auto;
+}
+
+.canvas-alert-container {
+	z-index: 200;
+	position: fixed;
+	left: 0;
+	top: 48px;
+	width: 100%;
+	margin: 0;
+}

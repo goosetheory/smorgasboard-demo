@@ -1,0 +1,43 @@
+<div class="container text-justify">
+	<div class="row">
+		<div class="card col-md instructions-column">
+			<div class="card-header row">
+				<div class="col-8">
+					<h3 class="card-title">Show</h3>
+				</div>
+				<div class="col-4">
+					<fa-icon class="fa-2x" icon="tv"></fa-icon>
+				</div>
+			</div>
+			<div class="card-body">
+				<p>Connect your computer to a TV or projector to display photos you and your friends take in real time.</p>
+			</div>
+		</div>
+		<div class="card col-md bg-dark text-light instructions-column mx-md-2">
+			<div class="card-header row">
+				<div class="col-8">
+					<h3 class="text-light">Snap</h3>
+				</div>
+				<div class="col-4">
+					<fa-icon class="fa-2x" icon="camera"></fa-icon>
+				</div>
+			</div>
+			<div class="card-body">
+				<p>You and your guests can post photos by scanning your board's QR code or visiting <a class="light-link" [href]="addPhotoLink">this link </a><fa-icon class="clickable" [icon]="['far', 'copy']" (click)="copyLink()"></fa-icon>.</p>
+			</div>
+		</div>
+		<div class="card col-md instructions-column">
+			<div class="card-header row">
+				<div class="col-8">
+					<h3 class="card-title">Share</h3>
+				</div>
+				<div class="col-4">
+					<fa-icon class="fa-2x" icon="user-friends"></fa-icon>
+				</div>
+			</div>
+			<div class="card-body">
+				<p>Once your event is over, we'll send you all the photos that were added to your board<span *ngIf="isFreeTrial()"><b> (full version only)</b></span>.</p>
+			</div>
+		</div>
+	</div>
+</div>

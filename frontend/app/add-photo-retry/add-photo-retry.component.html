@@ -1,0 +1,8 @@
+<div class="container-md text-center py-4">
+	<span>Last upload failed.</span>
+	<br/>
+	<button type="button" class="btn btn-danger" [disabled]="!retryEnabled" (click)="retry()">
+		<span *ngIf="retrying" class="spinner-border spinner-border-sm" role="status"></span>
+		{{ retryButtonText }}
+	</button>
+</div>

@@ -1,0 +1,40 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+/* The hero image */
+.hero-image {
+	/* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+									  rgba(0, 0, 0, 0.7)),
+	url("../../assets/roof-banner.png");
+
+	/* Set a specific height */
+	height: 400px;
+	width: 100%;
+
+	/* Position and center the image to scale nicely on all screens */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+	text-align: center;
+	color: #E1E1E1;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.banner-text {
+	max-width: 800px;
+}
+
+.button-row {
+	width: 100%;
+}
+
+.banner-button {
+	min-width: 180px;
+}

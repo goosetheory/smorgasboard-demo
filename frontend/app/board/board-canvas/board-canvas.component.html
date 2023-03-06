@@ -1,0 +1,41 @@
+<div class="photo-canvas" #photoCanvas>
+	<div class="board-name-container">
+		<h2 class="text-light p-2">{{ board.boardName }}</h2>
+	</div>
+
+	<div *ngIf="isFullscreen()" class="canvas-alert-container">
+		<app-canvas-alert #canvasAlert></app-canvas-alert>
+	</div>
+
+	<div class="abs-center">
+		<div>
+			<span *ngIf="loading && isFullscreen()"
+			class="spinner-border spinner-border-sm large-spinner text-light" role="status"></span>
+		</div>
+		<h2 *ngIf="!loading && !photoCanvasService.activePhotos.length && isFullscreen()" class="text-center text-light">
+			No photos yet. Scan the QR code to add some!
+		</h2>
+		<div *ngIf="!isFullscreen()">
+			<button (click)="enterFullscreen()" class="btn btn-primary my-2" *ngIf="boardIsActive()">
+				Open Board
+			</button>
+
+			<button (click)="startBoardForFirstTime()" class="btn btn-primary my-2" *ngIf="boardIsNotStarted()">
+				Launch Board
+			</button>
+
+			<p class="lead text-light" *ngIf="boardIsCompleted()">This SmorgasBoard has completed.</p>
+		</div>
+	</div>
+
+	<div class="canvas-controls" *ngIf="boardIsActive()">
+		<button type="button" class="btn btn-secondary" (click)="toggleFullscreen()">
+			<fa-icon *ngIf="!isFullscreen()" icon="expand"></fa-icon>
+			<fa-icon *ngIf="isFullscreen()" icon="compress"></fa-icon>
+		</button>
+	</div>
+
+	<app-board-photo @removeTrigger [hidden]="!isFullscreen()" *ngFor="let photo of photoCanvasService.activePhotos; let i = index"
+		[photo]="photo" [ngStyle]="{'z-index': i}"></app-board-photo>
+	<app-qr-code [hidden]="!isFullscreen()" class="bottom-left" [joinCode]="board.joinCode"></app-qr-code>
+</div>

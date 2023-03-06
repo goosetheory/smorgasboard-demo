@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "storage": {
+      "media": [
+        "create",
+        "read"
+      ]
+    }
+  },
+  "lambdaLayers": [
+    {
+      "type": "ProjectLayer",
+      "resourceName": "common2",
+      "version": 7
+    }
+  ]
+}

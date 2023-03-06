@@ -1,0 +1,10 @@
+@use "sass:map";
+
+@import "../../theme.scss";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+.board-link {
+	min-height: 40px;
+	width: 100%;
+}

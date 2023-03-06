@@ -1,0 +1,57 @@
+<app-page-banner [photoSrc]="'bar-banner.png'" [bannerText]="'Frequently Asked Questions'"></app-page-banner>
+<div class="container py-2">
+	<div class="row">
+		<ngb-accordion [closeOthers]="true" activeIds="top">
+			<ngb-panel title="How many photos can be put on a board?" id="top">
+				<ng-template ngbPanelContent>
+					Thousands! If the board fills up, it'll automatically hide older photos as new ones are added. Once enough photos are added, the board will start cycling through older photos. After your event, we'll send you these hidden photos along with the rest.
+				</ng-template>
+			</ngb-panel>
+
+			<ngb-panel title="What equipment do I need to use SmorgasBoard?">
+				<ng-template ngbPanelContent>
+					Just like a wedding slideshow, we recommend you plug a laptop into a projector and put it somewhere guests can see. Then, simply go to My Board to start your board; you won't need to do anything else for the rest of the night.
+				</ng-template>
+			</ngb-panel>
+
+			<ngb-panel title="What if someone adds a photo I don't like?">
+				<ng-template ngbPanelContent>
+					We've found that people tend to exercise good judgement when choosing which photos to add. But just in case, photos can be removed with a tap. Simply head to your board's page and click "Manage your photos".
+				</ng-template>
+			</ngb-panel>
+
+			<ngb-panel title="I want to focus on my event, not be on a computer! Can I still use SmorgasBoard?">
+				<ng-template ngbPanelContent>
+					Of course! We recommend you ask your event planner or coordinator if they can help display your board day-of. They'll need to plug a laptop into a projector or TV somewhere guests can see. If you have an account, you may need to log in.
+				</ng-template>
+			</ngb-panel>
+
+			<ngb-panel title="Do I need to download an app to use SmorgasBoard? Do my guests?">
+				<ng-template ngbPanelContent>
+					No and no! SmorgasBoard works in your web browser — no app required. Your guests can visit a link or scan your board's QR code to add pics, but this doesn't require an app either; they can upload directly from their phone's web browser. We made SmorgasBoard to be as quick and easy to use as possible, even for folks that aren't particularly technically inclined.
+				</ng-template>
+			</ngb-panel>
+
+			<ngb-panel title="I want my guests to talk to each other. Will they be staring at their phones instead?">
+				<ng-template ngbPanelContent>
+					SmorgasBoard was built to encourage people to take fun, candid photos and then <i>put their phones down</i>. That's why there's no way for guests to scroll through the photos that have been taken on their phones. Instead, they'll look at them up on your projector or TV, which makes for a more social experience. Of course, we'll send you, the host, all the photos after the event, so you can share those photos around.
+				</ng-template>
+			</ngb-panel>
+
+			<ngb-panel title="Does SmorgasBoard work for events other than weddings?">
+				<ng-template ngbPanelContent>
+					Absolutely. Although SmorgasBoard was built with weddings in mind, it's also great for baby showers, school dances (especially prom!), birthday parties, bar/bat mitzvahs, and more.
+				</ng-template>
+			</ngb-panel>
+
+			<ngb-panel title="I have to license photos from my wedding photographer. Do I have to license from SmorgasBoard, too?">
+				<ng-template ngbPanelContent>
+					Nope. All photos are yours to do with as you please, no strings attached, forever.
+				</ng-template>
+			</ngb-panel>
+		</ngb-accordion>
+	</div>
+	<div class="px-2 row">
+		<p>Didn't see an answer to your question? Please <a href="contact-us">get in touch</a>.
+	</div>
+</div>
